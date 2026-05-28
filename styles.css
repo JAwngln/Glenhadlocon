@@ -1,0 +1,1113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: #0d0d0d;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background: #0d0d0d;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    animation: fadeInUp 1s ease-out;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    color: #aaaaaa;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #ffffff;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    background: #0d0d0d;
+    margin: 2px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    position: relative;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #ff6b6b;
+}
+
+/* About Section */
+.about-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.about-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card-link:hover .about-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.about-card .role {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.about-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border: 3px solid #333333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-card .bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #aaaaaa;
+}
+
+.about-card .bio strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.view-profile-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 25px;
+    background: #ff6b6b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Mark John Dimapilis Section */
+.section-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.dimapilis-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.samples-photos-section {
+    position: relative;
+}
+
+.samples-photos-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #1a1a1a;
+}
+
+.samples-photos-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.samples-photos-scroll-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.samples-photos-scroll-container::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+}
+
+.samples-photos-scroll-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.samples-label {
+    font-size: 0.85rem;
+    color: #888888;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.samples-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.equipments-use-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.equipments-use-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.equipments-use-card p {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.equipments-use-card strong {
+    color: #ffffff;
+}
+
+.equipments-use-card img {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.videography-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.videography-content h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.videography-subtitle {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.videography-tags {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #333333;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.videography-samples-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #1a1a1a;
+}
+
+.videography-samples-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.videography-samples-scroll::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.videography-samples-scroll::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+}
+
+.videography-samples-scroll img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+/* Achievements Section */
+.achievements-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured-achievement {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.featured-video img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.featured-content h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.video-stats {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 1rem;
+}
+
+.achievement-text {
+    font-size: 1rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+.other-videos-section {
+    margin-top: 3rem;
+}
+
+.other-videos-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.other-videos-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #1a1a1a;
+}
+
+.other-videos-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.other-videos-scroll::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.other-videos-scroll::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+}
+
+.video-card {
+    flex-shrink: 0;
+    width: 300px;
+    scroll-snap-align: start;
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Mark John Achievements Section */
+.achievements-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-item {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.achievement-label {
+    font-size: 1rem;
+    color: #888888;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.achievement-desc {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    line-height: 1.4;
+}
+
+/* Skills/Hobbies Section */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.right-header {
+    text-align: right;
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: #00ff88;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-name {
+    font-size: 4rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.hobby-item {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hobby-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #00ff88;
+}
+
+.hobby-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hobby-item p {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* Hobbies Gallery Section */
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hobbies-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.hobby-gallery-item {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hobby-gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Casual Gaming Section */
+.gaming-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.gaming-item {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gaming-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gaming-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.portfolio-item {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-image {
+    height: 200px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a1a;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Athletic Excellence Section */
+.athletic-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.athletic-main-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.athletic-main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 2rem;
+}
+
+.image-overlay h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.image-overlay p {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    line-height: 1.4;
+}
+
+.athletic-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-subtitle {
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.detail-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.detail-description {
+    font-size: 1rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.training-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.training-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.training-card h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.athletic-quote {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 3rem;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.athletic-quote p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+/* Achievements of James Jordan Juegos Section */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.achievement-text p {
+    font-size: 1rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.achievement-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Hobbies */
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hobby-tag {
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.hobby-tag:hover {
+    background: #764ba2;
+}
+
+/* Contact */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-group h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-group p {
+    font-size: 1rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b6b;
+}
+
+.contact-form-section {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #0d0d0d;
+    color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+.btn-send {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-send:hover {
+    background: #ff5252;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #888888;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #333333;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
